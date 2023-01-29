@@ -1,0 +1,12 @@
+@import '../../assets/scss/variable';
+
+
+body {
+    margin: 0;
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    background: $color-primary;
+}

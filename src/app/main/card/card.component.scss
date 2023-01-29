@@ -1,0 +1,11 @@
+@import '../../../assets/scss/variable';
+
+.card-container {
+    height: 100px;
+    width: 50px;
+    background: linear-gradient(45deg, #F80040 20%, transparent 20%, transparent 80%, #F80040 80%, #F80040 100%), linear-gradient(135deg, #F80040 20%, transparent 20%, transparent 80%, #F80040 80%, #F80040 100%), radial-gradient(circle at top, transparent 9%, #F80040 10%, #F80040 15%, transparent 16%), radial-gradient(circle at bottom, transparent 9%, #F80040 10%, #F80040 15%, transparent 16%), radial-gradient(circle at right, transparent 9%, #F80040 10%, #F80040 15%, transparent 16%), radial-gradient(circle at left, transparent 9%, #F80040 10%, #F80040 15%, transparent 16%), radial-gradient(#F80040 25%, transparent 26%);
+    background-size: 1em 1em;
+    background-color: #150A41;
+    border: $color-black 1px solid;
+    opacity: 1
+}

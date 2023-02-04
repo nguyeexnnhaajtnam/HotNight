@@ -1,9 +1,10 @@
 
 <div class="d-grid">
-    <button (click)="changeGame()" class="rounded-0 btn btn-danger" type="button">Change game</button>
+    <button (click)="onChangeGame()" class="rounded-0 btn btn-danger" type="button">Change game</button>
   </div>
 <div
     class="background d-flex justify-content-center align-items-center">
-    <app-dice *ngIf="!isChange"></app-dice>
-    <app-card *ngIf="isChange"></app-card>
+    <app-dice *ngIf="isChange === 1"></app-dice>
+    <app-card *ngIf="isChange === 2"></app-card>
+    <app-wheel *ngIf="isChange === 3"></app-wheel>
 </div>

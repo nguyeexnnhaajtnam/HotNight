@@ -1,0 +1,12 @@
+@import '../../../assets/scss/variable';
+
+.card-container {
+    height: 100px;
+    width: 500px;
+}
+
+p {
+    font-family: $font-title;
+    margin: 0;
+    font-weight: 500;
+}

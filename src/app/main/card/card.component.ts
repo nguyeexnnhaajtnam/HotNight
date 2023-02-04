@@ -14,7 +14,6 @@ export class CardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.listAction[1]);
   }
 
   generateAction() {

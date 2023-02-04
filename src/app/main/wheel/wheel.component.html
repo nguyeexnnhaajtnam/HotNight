@@ -1,1 +1,32 @@
-<p>wheel works!</p>
+
+<div class="container d-flex align-items-center gap-5">
+    <div class="text-center">
+        <ngx-wheel
+        Roulette
+        [width]="400"
+        [height]="400"
+        [spinDuration]="timeSpin"
+        [items]="items"
+        [innerRadius]="0"
+        [spinAmount]="10"
+        [textOrientation]="textOrientation"
+        [textAlignment]="textAlignment"
+        pointerStrokeColor="#fe6f9c"
+        pointerFillColor="#fe6f9c"
+        [idToLandOn]="idToLandOn"
+        (onSpinStart)="before()"
+        (onSpinComplete)="after()"
+        ></ngx-wheel> 
+        <div class="reset mt-5">
+            <button type="button" class="btn btn-secondary" (click)="reset()">Reset</button>
+        </div>
+    </div>
+    <div class="text-center">
+        <div
+            class="card-container d-flex justify-content-center align-items-center border border-dark rounded mb-5">
+            <p *ngIf="this.idToLandOn">
+                {{action}}
+            </p>
+        </div>
+    </div>
+</div>

@@ -6,12 +6,17 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./main.component.scss'],
 })
 export class MainComponent implements OnInit {
-  isChange: boolean = false;
+  changeGame: number[] = [1, 2, 3]
+  isChange: number = 3;
+  i: number = 0;
   constructor() { }
 
   ngOnInit(): void { }
 
-  changeGame() {
-    this.isChange = !this.isChange;
+  onChangeGame() {
+    this.isChange = this.changeGame[this.i++]
+    if (this.i === this.changeGame.length) {
+      this.i = 0
+    }
   }
 }

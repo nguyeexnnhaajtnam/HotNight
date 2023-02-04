@@ -1,6 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { MatDialog } from '@angular/material';
-import { RewardDialogComponent } from '../reward-dialog/reward-dialog.component';
+import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-dice',
@@ -15,9 +13,17 @@ export class DiceComponent implements OnInit {
 
   isDisable: boolean = false;
 
-  constructor(private dialog: MatDialog) {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
+
+  rollDiceOne() {
+    this.diceOne = Math.floor(Math.random() * 6 + 1);
+  }
+
+  rollDiceTwo() {
+    this.diceTwo = Math.floor(Math.random() * 6 + 1);
+  }
 
   rollDice() {
     setTimeout(() => {
@@ -25,9 +31,5 @@ export class DiceComponent implements OnInit {
       this.diceTwo = Math.floor(Math.random() * 6 + 1);
     }, 500);
   }
-  dialogRed = this.dialog.open(RewardDialogComponent, {
-    hasBackdrop: true,
-    minWidth: '50vw',
-    minHeight: '50vh',
-  });
+
 }

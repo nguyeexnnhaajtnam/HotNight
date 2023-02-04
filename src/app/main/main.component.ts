@@ -7,11 +7,11 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
   isChange: boolean = false;
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
-  rolled(event: boolean) {
-    this.isChange = event;
+  changeGame() {
+    this.isChange = !this.isChange;
   }
 }

@@ -1,6 +1,6 @@
 <div class="game">
     <div class="container">
-        <div class="dice dice-one show-{{diceOne}}">
+        <div (click)="rollDiceOne()" matTooltip="Actions" class="dice dice-one show-{{diceOne}}">
             <div id="dice-one-side-one" class='side one'>
                 <div class="dot one-1"></div>
             </div>
@@ -8,8 +8,7 @@
                 <div class="dot two-1"></div>
                 <div class="dot two-2"></div>
             </div>
-            <div id="dice-one-side-three"
-                class='side three'>
+            <div id="dice-one-side-three" class='side three'>
                 <div class="dot three-1"></div>
                 <div class="dot three-2"></div>
                 <div class="dot three-3"></div>
@@ -38,7 +37,7 @@
         </div>
     </div>
     <div class="container">
-        <div class="dice dice-two show-{{diceTwo}}">
+        <div (click)="rollDiceTwo()" matTooltip="Categories" class="dice dice-two show-{{diceTwo}}">
             <div id="dice-two-side-one" class='side one'>
                 <div class="dot one-1"></div>
             </div>
@@ -77,6 +76,77 @@
     </div>
     <div class='roll-button'>
         <button (click)="rollDice()">Roll
-            dice!</button>
+            dices!</button>
+    </div>
+    <div>
+        <table class="table table-hover table-bordered">
+            <thead>
+              <tr class="table-active">
+                <th class="hot-text" scope="col">Category/Action</th>
+                <th class="hot-text text-center" scope="col">1</th>
+                <th class="hot-text text-center" scope="col">2</th>
+                <th class="hot-text text-center" scope="col">3</th>
+                <th class="hot-text text-center" scope="col">4</th>
+                <th class="hot-text text-center" scope="col">5</th>
+                <th class="hot-text text-center" scope="col">6</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="hot-text" scope="row">Kiss</th>
+                <td>Forehead</td>
+                <td>Cheek</td>
+                <td>Lips</td>
+                <td>"The French Kiss"</td>
+                <td>Nipples</td>
+                <td>Pussy</td>
+              </tr>
+              <tr>
+                <th class="hot-text" scope="row">Lick</th>
+                <td>Lips</td>
+                <td>Neck</td>
+                <td>Nipples</td>
+                <td>Body</td>
+                <td>Armpit</td>
+                <td>Pussy</td>
+              </tr>
+              <tr>
+                <th class="hot-text" scope="row">Massage</th>
+                <td>Head</td>
+                <td>Neck/Shoulder</td>
+                <td>Arm/Leg</td>
+                <td>Boobs</td>
+                <td>Butt</td>
+                <td>Pussy</td>
+              </tr>
+              <tr class="table-warning">
+                <th class="hot-text" scope="row">Challenge</th>
+                <td>1/5 minutes</td>
+                <td>2/10 minutes</td>
+                <td>3/15 minutes</td>
+                <td>4/20 minutes</td>
+                <td>5/25 minutes</td>
+                <td>6/30 minutes</td>
+              </tr>
+              <tr class="table-success">
+                <th class="hot-text" scope="row">Pleasure</th>
+                <td>Oral for him/her</td>
+                <td>Lick/Kiss everywhere he/she says</td>
+                <td>Cuddle him/her</td>
+                <td>Say "I LOVE YOU"</td>
+                <td>Do anything you want</td>
+                <td>Let's Fuck</td>
+              </tr>
+              <tr class="table-danger">
+                <th class="hot-text" scope="row">Punishment</th>
+                <td>Spank/slap his/her ass really hard</td>
+                <td>Tie up and blindfold him/her and edging</td>
+                <td>Tickle</td>
+                <td>Bite his/her nipple</td>
+                <td>Lose your turn</td>
+                <td>Do anything he/she says</td>
+              </tr>
+            </tbody>
+          </table>
     </div>
 </div>

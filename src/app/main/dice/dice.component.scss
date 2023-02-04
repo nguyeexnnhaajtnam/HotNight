@@ -2,8 +2,8 @@
 
 button {
   position: relative;
-  top: 80px;
-  left: 10px;
+  top: -30px;
+  left: 42%;
   padding: 15px 50px;
   color: #fff;
   background-color: $color-primary;
@@ -21,6 +21,11 @@ button:active {
   background: #50514f;
   cursor: pointer;
   transform: translateY(15px);
+}
+
+.hot-text {
+  color: $color-primary;
+  font-family: $font-title;
 }
 
 .game {
@@ -55,14 +60,16 @@ button:active {
 
 .dice-one {
   position: absolute;
-  left: 150px;
-  bottom: 200px;
+  left: 50%;
+  bottom: 260px;
+  cursor: pointer;
 }
 
 .dice-two {
   position: absolute;
-  left: -50px;
-  bottom: 200px;
+  left: 40%;
+  bottom: 260px;
+  cursor: pointer;
 }
 
 .side {
@@ -80,7 +87,7 @@ button:active {
   transform: translateZ(3.1em);
 }
 
-.side:nth-child(6) {
+.side:nth-child(2) {
   transform: rotateY(90deg) translateZ(3.1em);
 }
 
@@ -96,7 +103,7 @@ button:active {
   transform: rotateX(-90deg) translateZ(3.1em);
 }
 
-.side:nth-child(2) {
+.side:nth-child(6) {
   transform: rotateY(-180deg) translateZ(3.1em);
 }
 
@@ -104,7 +111,7 @@ button:active {
   transform: rotateX(720deg) rotateZ(-720deg);
 }
 
-.show-6 {
+.show-2 {
   transform: rotateX(-900deg) rotateZ(1080deg);
 }
 
@@ -120,7 +127,7 @@ button:active {
   transform: rotateX(-810deg) rotateZ(-1080deg);
 }
 
-.show-2 {
+.show-6 {
   transform: rotateX(450deg) rotateZ(-720deg);
 }
 

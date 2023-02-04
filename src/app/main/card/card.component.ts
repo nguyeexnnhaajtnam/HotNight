@@ -11,7 +11,7 @@ export class CardComponent implements OnInit {
   action: string = '';
   isShown: boolean = false;
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit(): void {
     console.log(this.listAction[1]);
@@ -21,9 +21,5 @@ export class CardComponent implements OnInit {
     this.isShown = true;
     this.action =
       this.listAction[Math.floor(Math.random() * this.listAction.length)];
-  }
-
-  reset() {
-    window.location.reload();
   }
 }

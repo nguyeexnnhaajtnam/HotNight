@@ -1,6 +1,10 @@
 <div class="game">
     <div class="container">
-        <div (click)="rollDiceOne()" matTooltip="Actions" class="dice dice-one show-{{diceOne}}">
+        <div 
+        (click)="rollDiceOne()"
+        matTooltipPosition="below"
+        matTooltip="Roll only Actions" 
+        class="dice dice-one show-{{diceOne}}">
             <div id="dice-one-side-one" class='side one'>
                 <div class="dot one-1"></div>
             </div>
@@ -37,7 +41,11 @@
         </div>
     </div>
     <div class="container">
-        <div (click)="rollDiceTwo()" matTooltip="Categories" class="dice dice-two show-{{diceTwo}}">
+        <div 
+        (click)="rollDiceTwo()" 
+        matTooltipPosition="below"
+        matTooltip=" Roll only Categories" 
+        class="dice dice-two show-{{diceTwo}}">
             <div id="dice-two-side-one" class='side one'>
                 <div class="dot one-1"></div>
             </div>

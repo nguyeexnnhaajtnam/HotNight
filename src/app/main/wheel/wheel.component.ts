@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgxWheelComponent, TextAlignment, TextOrientation } from "ngx-wheel";
+import { ViewWheel } from 'src/model/Wheel-Game/wheel-game.model';
 import { DARE, TRUTH } from './constant/truthordare.constant';
 
 @Component({
@@ -20,10 +21,14 @@ export class WheelComponent implements OnInit {
   truthList = TRUTH;
   darelist = DARE;
   action!: string;
-
+  view:ViewWheel = {
+    sizeWidth: 400,
+    sizeHeight: 400
+  }
   constructor() { }
 
   ngOnInit(): void {
+    this.checkResize();
     this.idToLandOn = this.slicePrizes[
       Math.floor(Math.random() * this.seed.length)
     ];
@@ -34,6 +39,7 @@ export class WheelComponent implements OnInit {
       textFillStyle: "white",
       textFontSize: "16"
     }));
+    
   }
 
   reset() {
@@ -69,5 +75,16 @@ export class WheelComponent implements OnInit {
       this.action = this.darelist[Math.floor(Math.random() * DARE.length)]
     }
   }
-
+  checkResize(){
+    if(screen.width > 500){
+      this.view.sizeWidth = 400;
+      this.view.sizeHeight = 400
+    }else if(screen.width <= 500 && screen.width >400 ){
+      this.view.sizeWidth = 350;
+      this.view.sizeHeight = 350
+    }else{
+      this.view.sizeWidth = 300;
+      this.view.sizeHeight = 300
+    }
+  }
 }

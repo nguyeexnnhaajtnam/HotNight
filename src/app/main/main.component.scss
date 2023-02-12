@@ -2,10 +2,26 @@
 
 body {
   margin: 0;
+  padding: 0;
 }
 
+.change-btn{
+  width: 100%;
+  text-align: center;
+}
 .background {
   width: 100vw;
   height: 100vh;
   background: $color-white;
+}
+@media only screen and (min-width: 992px) {
+  .change-btn{
+
+  }
+}
+
+@media only screen and (max-height: 650px) {
+ .change-btn{
+    
+  }
 }

@@ -1,12 +1,29 @@
 @import '../../../assets/scss/variable';
 
+.wheel-game{
+    display: flex;
+}
+
 .card-container {
     height: 100px;
     width: 500px;
 }
-
 p {
     font-family: $font-title;
     margin: 0;
     font-weight: 500;
 }
+@media only screen and (max-width: 1000px) {
+    .wheel-game{
+        display: unset;
+    }
+    
+}
+@media only screen and (max-width: 520px) {
+    .card-container {
+        height: 100px;
+        width: 100%;
+    }
+  }
+  
+  
